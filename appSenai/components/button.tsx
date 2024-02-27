@@ -14,12 +14,15 @@ const styles = StyleSheet.create({
     botao: {
         backgroundColor: '#000',
         width: 320,
-        height: 37,
+        height: 45,
+        borderRadius: 10,
     },
 
     texto: {
         color: '#ffffff',
-        marginLeft:100,
+        marginTop: 13,
+        textAlign: 'center',
+
     }
 })
 

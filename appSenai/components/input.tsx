@@ -12,22 +12,23 @@ const Input = ({ nome, texto }) => {
 const styles = StyleSheet.create({
 
 
+
   camp: {
-    marginLeft: 50,
+    marginLeft: 3,
     backgroundColor: '#F5F5F5',
     width: 320,
-    height: 45,
+    height: 40,
     borderRadius: 5,
     padding: 10,
-    gap: 10,
+
 
     
 
   },
 
   texto: {
-    marginLeft: 50,
-    marginBottom: 30,
+    marginLeft: 3,
+    marginBottom: 10,
     fontSize: 17,
 
     
