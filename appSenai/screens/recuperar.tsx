@@ -12,7 +12,7 @@ export default function Recuperar(){
 
         <View style={styles.container}>
         <Text style={styles.texto} >Insira o seu e-mail para recuperar a sua senha!</Text>
-        <Input nome="Email:" texto="Insira o seu email:"/>
+        <Input nome="Email:" placeholder="Insira o seu email:"/>
         <Button texto="Prosseguir" />
 
 

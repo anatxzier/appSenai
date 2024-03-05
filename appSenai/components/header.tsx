@@ -1,7 +1,12 @@
 
 import { StyleSheet, View, Text, Image } from "react-native";
-{}
-function Header({cor , texto}){
+
+type Headerprops = {
+    cor: string,
+    texto: string
+}
+
+function Header({cor , texto}: Headerprops){
     return(
         <>
         <View style ={[styles.container, {backgroundColor: cor}]} >

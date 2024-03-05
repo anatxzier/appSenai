@@ -1,6 +1,10 @@
 import { StyleSheet, View, Text } from "react-native";
 
-function Button ({texto}){
+type Buttonprops = {
+    texto:string
+}
+
+function Button ({texto}: Buttonprops){
     return(
         <>
         <View style={styles.botao}>

@@ -4,16 +4,18 @@ import Login from './screens/login';
 import Recuperar from './screens/recuperar';
 import Cadastro from './screens/cadastro';
 import Loading from './screens/load';
+import Inventario from './screens/inventario';
+import Add from './screens/additens';
 
 export default function App() {
   return (
-    <View>
+    <>
       <StatusBar style="auto"/>
 
-      <Cadastro />
+      <Add />
 
 
-    </View>
+    </>
   );
 }
 

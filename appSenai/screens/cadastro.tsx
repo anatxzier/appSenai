@@ -11,11 +11,11 @@ export default function Cadastro(){
         </View>
 
         <View style={styles.container}>
-        <Input nome="Nome:" texto="Insira o seu nome:"/>
-        <Input nome="Sobrenome:" texto="Insira o seu sobrenome:"/>
-        <Input nome="Email:" texto="Insira o seu telefone:"/>
-        <Input nome="Senha:" texto="Insira a sua senha:"/>
-        <Input nome="Senha:" texto="Insira a sua senha:"/>
+        <Input nome="Nome:" placeholder="Insira o seu nome:"/>
+        <Input nome="Sobrenome:" placeholder="Insira o seu sobrenome:"/>
+        <Input nome="Email:" placeholder="Insira o seu telefone:"/>
+        <Input nome="Senha:" placeholder="Insira a sua senha:"/>
+        <Input nome="Senha:" placeholder="Insira a sua senha:" secureTextEntry={true} />
         <Button texto="Cadastre-se" />
         </View>
 

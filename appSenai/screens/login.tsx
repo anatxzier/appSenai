@@ -13,8 +13,8 @@ export default function Login(){
 
         <View style={styles.container}>
         <Text style={styles.texto} >Faça Login Para Acessar O Sistema!</Text>
-        <Input nome="Email:" texto="Insira o seu email:"/>
-        <Input nome="Senha:" texto="Insira a sua senha::"/>
+        <Input nome="Email:" placeholder="Insira o seu email:"/>
+        <Input nome="Senha:" placeholder="Insira a sua senha::"/>
         <Button texto="Cadastre-se" />
 
         <View style={styles.container2} >
