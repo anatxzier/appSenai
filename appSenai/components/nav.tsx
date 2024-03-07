@@ -28,13 +28,14 @@ export default Nav
 const styles = StyleSheet.create({
     container:{
         width: 'auto',
-        height: 60,
+        height: 'auto',
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: 30,
         textAlign: 'center',
         justifyContent:'space-around',
-        color: '#000'
+        color: '#fff',
+        padding: 20,
 
         
         

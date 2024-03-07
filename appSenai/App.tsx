@@ -6,13 +6,14 @@ import Cadastro from './screens/cadastro';
 import Loading from './screens/load';
 import Inventario from './screens/inventario';
 import Add from './screens/additens';
+import Descrição from './screens/descricao';
 
 export default function App() {
   return (
     <>
       <StatusBar style="auto"/>
 
-      <Add />
+      <Descrição />
 
 
     </>

@@ -4,14 +4,15 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 type FooterProps = {
     cor: string
+    corele: string
 }
 
-function Footer ({cor}: FooterProps){
+function Footer ({cor, corele}: FooterProps){
     return(
         <>
         <View style = {[styles.container, {backgroundColor: cor}]}>
-            <Ionicons style={styles.icone} name="camera-reverse" size={24} color="white" />
-            <FontAwesome5 style={styles.icone}  name="list-ol" size={24} color="white" />
+            <Ionicons style={styles.icone} name="camera-reverse" size={24} color={corele} />
+            <FontAwesome5 style={styles.icone}  name="list-ol" size={24} color={corele} />
         </View>
         </>
     )
@@ -24,6 +25,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         gap: 20,
+        borderTopWidth: 1,
+        borderColor: '#CBCBCB',
     },
 
     icone:{
