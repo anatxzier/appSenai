@@ -7,13 +7,15 @@ import Loading from './screens/load';
 import Inventario from './screens/inventario';
 import Add from './screens/additens';
 import Descrição from './screens/descricao';
+import Editar from './screens/editar';
+import Scanner from './screens/scanner';
 
 export default function App() {
   return (
     <>
       <StatusBar style="auto"/>
 
-      <Descrição />
+      <Loading />
 
 
     </>

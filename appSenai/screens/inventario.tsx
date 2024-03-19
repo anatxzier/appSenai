@@ -4,7 +4,8 @@ import Produto from "../components/produto";
 import Footer from "../components/footer";
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-
+import Btn from "../components/btn";
+import { AntDesign } from '@expo/vector-icons';
 
 
 export default function Inventario(){
@@ -12,8 +13,8 @@ export default function Inventario(){
         <>
         <View style={styles.container}>
         <Nav 
-        cor='#000' 
-        corTexto="fff"
+        cor='#fff' 
+        corTexto="#000"
         icone1={<Feather name="menu" size={30} color="black" />} 
         texto={"Lista"} 
         icone2={<MaterialIcons name="search" size={30} color="black" />}/>
@@ -37,12 +38,11 @@ export default function Inventario(){
         <Produto numero="956389" nome="CADEIRA SENAI"/>
         <Produto numero="956389" nome="CADEIRA SENAI"/>
         </ScrollView>
-
-        <Footer cor='#ff0000' corele="#000" />
-
+        
+        <Btn icone={<AntDesign name="pluscircle" size={70} color="#ff0000" />} />
         </View>
 
-
+        <Footer cor='#ff0000' corele="#fff" />
 
         
         </>
@@ -53,5 +53,6 @@ export default function Inventario(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        position:'relative',
       },
     });

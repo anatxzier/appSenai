@@ -11,7 +11,7 @@ function Header({cor , texto}: Headerprops){
         <>
         <View style ={[styles.container, {backgroundColor: cor}]} >
         <View style={styles.container2}>
-        <Image style={styles.logo}
+        <Image
         
         source={require('../assets/Logo.png')}
         />
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 20,
         marginTop: 10,
+        
 
     }
 

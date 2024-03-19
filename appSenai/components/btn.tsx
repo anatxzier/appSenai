@@ -1,11 +1,10 @@
 import { StyleSheet, View, TouchableOpacity} from "react-native";
 
 type BtnProps = {
-    cor:string
     icone: JSX.Element
 }
 
-function Btn ({cor, icone}: BtnProps){
+function Btn ({ icone}: BtnProps){
     return(
         <View style={styles.container} >
         <TouchableOpacity style={styles.overlay}>{icone}
@@ -15,16 +14,17 @@ function Btn ({cor, icone}: BtnProps){
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
+    container: {
+        flex: 1,
+        position: 'relative',
     },
     overlay: {
         position: 'absolute',
-        top: 300,
-        right: 20, 
+        bottom: 20,
+        right: 20,
         zIndex: 1, 
+    },
+});
 
-      },
-})
 
 export default Btn
