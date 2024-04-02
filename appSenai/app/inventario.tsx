@@ -1,10 +1,10 @@
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from "react-native";
-import Nav from "../components/nav";
-import Produto from "../components/produto";
-import Footer from "../components/footer";
+import Nav from "@comp/nav";
+import Produto from "@comp/produto";
+import Footer from "@comp/footer";
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import Btn from "../components/btn";
+import Btn from "@comp/btn";
 import { AntDesign } from '@expo/vector-icons';
 
 

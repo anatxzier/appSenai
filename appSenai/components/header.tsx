@@ -13,7 +13,7 @@ function Header({cor , texto}: Headerprops){
         <View style={styles.container2}>
         <Image
         
-        source={require('../assets/Logo.png')}
+        source={require('@assets/Logo.png')}
         />
         <Text style={styles.textoo}>{texto}</Text>
         </View>

@@ -1,8 +1,8 @@
-import { StyleSheet, View, Text } from "react-native";
-import Header from "../components/header";
-import Input from "../components/input";
-import Button from "../components/button";
-
+import { StyleSheet, View, Text, TouchableOpacity, } from "react-native";
+import Header from "@comp/header";
+import Input from "@comp/input";
+import { Link } from 'expo-router';
+import LinkBtn from "@comp/button";
 
 export default function Login(){
     return(
@@ -15,11 +15,21 @@ export default function Login(){
         <Text style={styles.texto} >Faça Login Para Acessar O Sistema!</Text>
         <Input nome="Email:" placeholder="Insira o seu email:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha::"/>
-        <Button texto="Cadastre-se" />
+        <LinkBtn title="Login" href="drawer" />
 
-        <View style={styles.container2} >
+        <View style={styles.container2}>
+        <Link href="telasIniciais/cadastro" asChild>
+        <TouchableOpacity>
         <Text style={styles.texto2}>Cadastre-se</Text>
-        <Text style={styles.texto2}>Esqueceu a senha?</Text>
+        </TouchableOpacity>
+        </Link>
+
+        <Link href="telasIniciais/recuperar" asChild>
+            <TouchableOpacity>
+            <Text style={styles.texto2}>Esqueceu a senha?</Text>
+            </TouchableOpacity>
+        </Link>
+
         </View>
         </View>
         </>

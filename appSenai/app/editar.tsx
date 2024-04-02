@@ -1,8 +1,8 @@
 import { View } from "react-native";
-import Input2 from "../components/input2";
-import Nav from "../components/nav";
+import Input2 from "@comp/input2";
+import Nav from "@comp/nav";
 import { AntDesign } from '@expo/vector-icons';
-import Footer from "../components/footer";
+import Footer from "@comp/footer";
 
 export default function Editar(){
     return(

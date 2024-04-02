@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text } from "react-native";
-import Header from "../components/header";
-import Input from "../components/input";
-import Button from "../components/button";
+import Header from "@comp/header";
+import Input from "@comp/input";
+import LinkBtn from "@comp/button";
 
 export default function Cadastro(){
     return(
@@ -16,7 +16,7 @@ export default function Cadastro(){
         <Input nome="Email:" placeholder="Insira o seu telefone:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha:" secureTextEntry={true} />
-        <Button texto="Cadastre-se" />
+        <LinkBtn title="Cadastre-se" href="drawer" />
         </View>
 
 

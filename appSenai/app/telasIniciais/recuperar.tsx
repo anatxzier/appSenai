@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text } from "react-native";
-import Header from "../components/header";
-import Input from "../components/input";
-import Button from "../components/button";
+import Header from "@comp/header";
+import Input from "@comp/input";
+import LinkBtn from "@comp/button";
 
 export default function Recuperar(){
     return(
@@ -13,7 +13,7 @@ export default function Recuperar(){
         <View style={styles.container}>
         <Text style={styles.texto} >Insira o seu e-mail para recuperar a sua senha!</Text>
         <Input nome="Email:" placeholder="Insira o seu email:"/>
-        <Button texto="Prosseguir" />
+        <LinkBtn title="Prosseguir" href="drawer" />
 
 
         </View>

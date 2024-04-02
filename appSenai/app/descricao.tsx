@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
-import Nav from "../components/nav";
+import Nav from "@comp/nav";
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import Footer from "../components/footer";
-import Desc from "../components/descProd";
-import Btn from "../components/btn";
+import Footer from "@comp/footer";
+import Desc from "@comp/descProd";
+import Btn from "@comp/btn";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Descrição(){

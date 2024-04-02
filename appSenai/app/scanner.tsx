@@ -1,8 +1,8 @@
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, View, Image, ScrollView} from 'react-native';
-import Nav from '../components/nav';
-import Footer from '../components/footer';
+import Nav from '@comp/nav';
+import Footer from '@comp/footer';
 export default function Scanner(){
     return(
         <>
@@ -19,7 +19,7 @@ export default function Scanner(){
             <View style={styles.container}>
             <Image
         
-            source={require('../assets/Vector.png')}
+            source={require('@assets/Vector.png')}
             />
             </View>
             </ScrollView>

@@ -1,34 +1,35 @@
-import { StyleSheet, View, Text } from "react-native";
+import { Link } from "expo-router"
+import { LinkProps } from "expo-router/build/link/Link" 
+import { Text,TouchableOpacity,StyleSheet,} from "react-native"
 
-type Buttonprops = {
-    texto:string
+
+interface LinkBtnProps extends LinkProps{
+    title: string
 }
 
-function Button ({texto}: Buttonprops){
+export default function LinkBtn({title, ...props}: LinkBtnProps){
+
+    const styles = StyleSheet.create({
+        button: {
+            backgroundColor: "#000000",
+            padding: 10,
+            borderRadius: 5,
+            width: 300
+        },
+
+        title: {
+            color: "#FFFFFF",
+            textAlign: 'center',
+            fontSize: 16,
+        }
+    })
+
     return(
-        <>
-        <View style={styles.botao}>
-            <Text style={styles.texto}>{texto}</Text>
-        </View>
-        </>
+
+        <Link {...props} asChild>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.title}>{title}</Text>
+            </TouchableOpacity>
+        </Link>
     )
 }
-
-const styles = StyleSheet.create({
-    botao: {
-        backgroundColor: '#000',
-        width: 320,
-        height: 45,
-        borderRadius: 10,
-    },
-
-    texto: {
-        color: '#ffffff',
-        marginTop: 13,
-        textAlign: 'center',
-
-    }
-})
-
-
-export default Button 
