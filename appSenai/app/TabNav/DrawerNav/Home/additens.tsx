@@ -7,15 +7,7 @@ import Footer from "@comp/footer";
 export default function Add() {
     return (
         <>
-            <View>
-                <Nav 
-                    cor="#ff0000"
-                    corTexto="#fff"
-                    icone1={<AntDesign name="arrowleft" size={30} color="white" />}
-                    texto='Cadastro de itens'
-                    icone2={<AntDesign name="pluscircleo" size={30} color="white" />}
-                />
-            </View >
+
             <ScrollView style={style.container}>
                 <Input2 nome="N° Inventário" />
                 <Input2 nome="Descrição" />

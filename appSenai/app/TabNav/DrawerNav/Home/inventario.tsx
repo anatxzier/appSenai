@@ -12,12 +12,6 @@ export default function Inventario(){
     return(
         <>
         <View style={styles.container}>
-        <Nav 
-        cor='#fff' 
-        corTexto="#000"
-        icone1={<Feather name="menu" size={30} color="black" />} 
-        texto={"Lista"} 
-        icone2={<MaterialIcons name="search" size={30} color="black" />}/>
 
 
         <ScrollView >
@@ -42,7 +36,6 @@ export default function Inventario(){
         <Btn icone={<AntDesign name="pluscircle" size={70} color="#ff0000" />} />
         </View>
 
-        <Footer cor='#ff0000' corele="#fff" />
 
         
         </>

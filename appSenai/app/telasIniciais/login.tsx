@@ -15,7 +15,7 @@ export default function Login(){
         <Text style={styles.texto} >Faça Login Para Acessar O Sistema!</Text>
         <Input nome="Email:" placeholder="Insira o seu email:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha::"/>
-        <LinkBtn title="Login" href="drawer" />
+        <LinkBtn title="Login" href="TabNav" />
 
         <View style={styles.container2}>
         <Link href="telasIniciais/cadastro" asChild>

@@ -8,11 +8,6 @@ export default function Editar(){
     return(
         <>
         <View>
-            <Nav cor="#ff0000"
-            corTexto="#fff"
-            texto="Editar"
-            icone1={<AntDesign name="arrowleft" size={30} color="white" />}
-            icone2={<AntDesign name="checkcircle" size={24} color="white" />}></Nav>
 
                 <Input2 nome="N° Inventário" />
                 <Input2 nome="Descrição" />

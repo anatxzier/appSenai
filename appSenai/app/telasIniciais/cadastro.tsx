@@ -16,7 +16,7 @@ export default function Cadastro(){
         <Input nome="Email:" placeholder="Insira o seu telefone:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha:"/>
         <Input nome="Senha:" placeholder="Insira a sua senha:" secureTextEntry={true} />
-        <LinkBtn title="Cadastre-se" href="drawer" />
+        <LinkBtn title="Cadastre-se" href="TabNav" />
         </View>
 
 

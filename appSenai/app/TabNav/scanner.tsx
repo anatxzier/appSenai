@@ -6,13 +6,7 @@ import Footer from '@comp/footer';
 export default function Scanner(){
     return(
         <>
-        <Nav 
-            texto="Scanner"
-            cor="#ff0000" 
-            corTexto="#fff"
-            icone1={<AntDesign name="arrowleft" size={30} color="white" />}
-            icone2={<Ionicons name="reload-outline" size={30} color="white" />}    
-            />
+
 
             <ScrollView>
 
@@ -24,14 +18,12 @@ export default function Scanner(){
             </View>
             </ScrollView>
         
-        <Footer cor='#fff' corele="#000" />
 
         </>
     )
 }
 
 const styles = StyleSheet.create({
-
     container:{
         width: '100%',
         height: 525,
