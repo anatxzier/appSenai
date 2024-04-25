@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TextInputProps } from 'react-native';
 
+type Cores = {
+  inputbgPrimaryVariant: string;
+  inputbgHover: string;
+  inputtextcolorPrimaryVariant: string;
+};
+
 
 interface InputProps extends TextInputProps{
-  label: string
+  nome: string
   cor: Cores
 }
 
 
-const Input = ({ nome, ...props }: Inputprops) => {
+const Input = ({ nome, ...props }: InputProps) => {
   const [hover, sethover] =useState(props.cor.inputbgPrimaryVariant)
 
   const styles = StyleSheet.create({
