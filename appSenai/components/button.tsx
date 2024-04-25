@@ -1,35 +1,38 @@
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native"
 import { Link } from "expo-router"
-import { LinkProps } from "expo-router/build/link/Link" 
-import { Text,TouchableOpacity,StyleSheet,} from "react-native"
+import { LinkProps } from "expo-router/build/link/Link"
+import { Cores } from "../Temas/Temas"
 
-
-interface LinkBtnProps extends LinkProps{
-    title: string
+interface LinkBtnProps extends LinkProps {
+  nome: string
+  cor: Cores
 }
 
-export default function LinkBtn({title, ...props}: LinkBtnProps){
-
-    const styles = StyleSheet.create({
-        button: {
-            backgroundColor: "#000000",
-            padding: 10,
-            borderRadius: 5,
-            width: 300
-        },
-
-        title: {
-            color: "#FFFFFF",
-            textAlign: 'center',
-            fontSize: 16,
-        }
-    })
-
-    return(
-
-        <Link {...props} asChild>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.title}>{title}</Text>
-            </TouchableOpacity>
-        </Link>
-    )
+export default function Button({ nome, ...props }: LinkBtnProps) {
+  const styles = StyleSheet.create({
+    container: {
+      marginTop: 20
+    },
+    button: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '78%',
+      height: 47,
+      backgroundColor: props.cor.nome === 'dark' ? props.cor.bgSecundary : '#000000',
+      borderRadius: 5,
+    },
+    TextButton: {
+      fontSize: 14,
+      color: "#FFFFFF",
+    },
+  })
+  return (
+    <Link style={styles.container} {...props} asChild >
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.TextButton }>{nome}</Text>
+      </TouchableOpacity>
+    </Link>
+  )
 }
+
+

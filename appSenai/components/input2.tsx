@@ -1,56 +1,42 @@
-import { StyleSheet, View, Text, TextInput, TextInputProps } from "react-native";
-import { useState } from "react";
+import { Link } from "expo-router"
+import { StyleSheet, Text, TouchableOpacity } from "react-native"
+import { Cores } from "../Temas/Temas"
+import { LinkProps } from "expo-router/build/link/Link"
 
-interface InputtProps extends TextInputProps {
-    nome: string
-}
+interface InputBtnProps extends LinkProps {
+    codigo: string,
+    texto: string,
+    cor: Cores
+  }
 
-const Input2 = ({ nome, ...props }: InputtProps) => {
-const [hover, setHover] = useState("#000")
+export default function Itens({codigo, texto,...props}:InputBtnProps){
 
-const styles = StyleSheet.create({
-    container: {
-        height: 51,
-        width: 320,
+    const styles = StyleSheet.create({
+    container:{
+        backgroundColor: props.cor.bgPrimary,
         borderWidth: 1,
-        borderColor: "#5d5c5c",
-        borderRadius: 5,
-        alignSelf: "center",
-        marginTop: 50,
-        position: "relative",
-        zIndex: 0,
-        borderColor: hover
+        borderColor: props.cor.nome == 'dark' ? props.cor.inputbgPrimaryVariant: '#F5F5F5',
+        padding: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        gap: 10
     },
-    textt: {
-        position: "absolute",
-        top: -10, 
-        left: 10, 
-        backgroundColor: "#ffffff",
-        zIndex: 1,
-        fontWeight: '600',
-    },
-    input: {
-        marginTop: 15, 
-        marginLeft: 10, 
-        width: "100%", 
-    },
-    asterisco: {
-        color: "#ff0000"
+    numero:{
+        color: props.cor.textcolorPrimary,
+        fontSize: 16,
+        fontWeight: '600'
+    },Tex:{
+        color: props.cor.textcolorSecundary,
+        fontSize: 14,
+        fontWeight: '400'
     },
 })
-    return (
-        <View>
-            <View style={styles.container}>
-                <Text style={styles.textt}>{nome} <Text style={styles.asterisco}>*</Text></Text>
-                <TextInput {...props} style={styles.input} onFocus={() =>{
-                setHover('#f39200')
-            }} onBlur={()=>{
-                setHover("#000")
-            }} />
-            </View>
-        </View>
+    return(
+        <Link {...props} asChild>
+            <TouchableOpacity style={styles.container}>
+                <Text style={styles.numero}>{codigo}</Text>
+                <Text style={styles.Tex}>{texto}</Text>
+            </TouchableOpacity>
+        </Link>
     )
 }
-
-
-export default Input2

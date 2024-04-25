@@ -2,29 +2,25 @@ import { StyleSheet, View, Text } from "react-native";
 import Header from "@comp/header";
 import Input from "@comp/input";
 import LinkBtn from "@comp/button";
+import useColor from "../../Temas/Temas";
 
 export default function Cadastro(){
-    return(
-        <>
-        <View>
-        <Header cor="#FF0000" texto="Cadastre-se"/>
-        </View>
-
+    const color = useColor()
+    return (
+      <View style={{backgroundColor: color.bgPrimary, height: '100%'}}>
+        <Header cor={color.nome === 'dark'? color.bgPrimary : color.bgSecundary} texto='Cadastre-se' />
         <View style={styles.container}>
-        <Input nome="Nome:" placeholder="Insira o seu nome:"/>
-        <Input nome="Sobrenome:" placeholder="Insira o seu sobrenome:"/>
-        <Input nome="Email:" placeholder="Insira o seu telefone:"/>
-        <Input nome="Senha:" placeholder="Insira a sua senha:"/>
-        <Input nome="Senha:" placeholder="Insira a sua senha:" secureTextEntry={true} />
-        <LinkBtn title="Cadastre-se" href="TabNav" />
+          <Input nome='Nome' placeholder='Insira seu nome:' cor={color}/>
+          <Input nome='Sobrenome' placeholder='Insira seu sobrenome:' cor={color}/>
+          <Input nome='E-mail' placeholder='Insira seu e-mail:' cor={color}/>
+          <Input nome='Telefone' placeholder='Insira seu telefone:' cor={color}/>
+          <Input secureTextEntry nome='Senha' placeholder='Insira sua senha:' cor={color}/>
+          <Input secureTextEntry nome='Confirmar senha' placeholder='Insira sua senha:' cor={color}/>
+          <LinkBtn nome='Cadastrar-se' href="index" cor={color}/>
         </View>
-
-
-
-        
-        </>
-    )
-}
+      </View>
+    );
+  }
 
 const styles = StyleSheet.create({
     container:{
