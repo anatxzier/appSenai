@@ -1,15 +1,10 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import useColor from '../Temas/Temas';
-type produtoProps = {
-    numero: string
-    nome: string
-
-}
+import { Link } from 'expo-router';
 
 
-const Produto = ({numero, nome}: produtoProps) => {
-    
-const color = useColor()
+export default function Produto ({ ...props}) {
+    const color = useColor()
 
 const styles = StyleSheet.create({
     container:{
@@ -42,14 +37,12 @@ const styles = StyleSheet.create({
 
 
     return(
-        <>
-        <View style={styles.container}>
-        <Text style={styles.texto1} >{numero}</Text>
-        <Text style={styles.texto2}>{nome}</Text>
-        </View>
-        </>
+        <Link href={props.link} asChild>
+        <TouchableOpacity style={styles.container}>
+        <Text style={styles.texto1} >{props.numero}</Text>
+        <Text style={styles.texto2}>{props.nome}</Text>
+        </TouchableOpacity>
+        </Link>
     )
 }
 
-
-export default Produto
