@@ -27,7 +27,7 @@ function Header({cor , texto}: Headerprops){
 
 const styles = StyleSheet.create({
     container:{
-        width: 411,
+        width: '100%',
         height: 250,
         borderRadius: 5,
     },
