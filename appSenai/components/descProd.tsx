@@ -1,40 +1,38 @@
 import { StyleSheet, View, Text } from "react-native";
+import useColor from "../Temas/Temas";
 
 type DescProps = {
-    titulo: string
-    texto: string
+    titulo: string;
+    texto: string;
 }
 
 function Desc ({titulo, texto}: DescProps){
-    return(
-    <>
-    <View style={style.container} >
-        <Text style={style.titulo} >{titulo}</Text>
-        <Text  style={style.text}>{texto}</Text>
+    const color = useColor();
 
-    </View>
-    </>
-)}
+    const style = StyleSheet.create({
+        container:{
+            alignContent: 'flex-start',
+            width: '100%',
+            height: 115,
+        },
+        titulo:{
+            fontWeight: '600',
+            marginLeft: 60,
+            marginTop: 50,
+            color: color.textcolorPrimary
+        },
+        text:{
+            marginLeft: 60,
+            color: color.textcolorPrimary
+        }
+    });
 
-export default Desc
+    return (
+        <View style={style.container} >
+            <Text style={style.titulo} >{titulo}</Text>
+            <Text style={style.text}>{texto}</Text>
+        </View>
+    );
+}
 
-const style = StyleSheet.create({
-    container:{
-        alignContent: 'flex-start',
-        width: '100%',
-        height: 115,
-        backgroundColor: '#FBFBFB',
-
-    },
-
-    titulo:{
-        fontWeight: '600',
-        marginLeft: 60,
-        marginTop: 50,
-    },
-    text:{
-        marginLeft: 60,
-    }
-
-
-})
+export default Desc;
