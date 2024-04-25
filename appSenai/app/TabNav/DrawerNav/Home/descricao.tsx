@@ -7,7 +7,7 @@ import Desc from "@comp/descProd";
 import Btn from "@comp/btn";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Descrição(){
+export default function descricao(){
     return(
         <>
         <View style={styles.container}>
