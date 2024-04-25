@@ -6,11 +6,24 @@ import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import Btn from "@comp/btn";
 import { AntDesign } from '@expo/vector-icons';
+import useColor from "../../../../Temas/Temas";
 
 
 export default function Inventario(){
+    const color = useColor()
+    
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            position:'relative',
+            backgroundColor: color.bgPrimary
+        },
+
+        });
     return(
+
         <>
+
         <View style={styles.container}>
 
 
@@ -42,10 +55,3 @@ export default function Inventario(){
     )
 }
 
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        position:'relative',
-      },
-    });

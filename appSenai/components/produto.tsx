@@ -1,12 +1,46 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native';
-
+import useColor from '../Temas/Temas';
 type produtoProps = {
     numero: string
     nome: string
 
 }
 
+
 const Produto = ({numero, nome}: produtoProps) => {
+    
+const color = useColor()
+
+const styles = StyleSheet.create({
+    container:{
+        width: '100%',
+        height: 66,
+        borderWidth: 1,
+        borderColor: color.nome === 'dark' ? '#3A2828' : '#F5F5F5',
+        justifyContent: 'center',
+        backgroundColor: color.bgPrimary
+
+
+
+    },
+
+    texto1 :{
+        marginLeft: 30,
+        fontWeight: '600',
+        color: color.textcolorPrimary
+    },
+
+    texto2: {
+        marginTop: 5,
+        marginLeft: 30,
+        fontWeight: '400',
+        color: color.textcolorPrimary
+    }
+
+
+})
+
+
     return(
         <>
         <View style={styles.container}>
@@ -17,30 +51,5 @@ const Produto = ({numero, nome}: produtoProps) => {
     )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        width: '100%',
-        height: 66,
-        borderWidth: 1,
-        borderColor: '#F5F5F5',
-        justifyContent: 'center',
-
-
-
-    },
-
-    texto1 :{
-        marginLeft: 30,
-        fontWeight: '600',
-    },
-
-    texto2: {
-        marginTop: 5,
-        marginLeft: 30,
-        fontWeight: '400',
-    }
-
-
-})
 
 export default Produto

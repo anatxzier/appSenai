@@ -37,7 +37,7 @@ export default function Scanner() {
   
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(String(status) === 'granted');
     })();
   }, []);

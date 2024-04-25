@@ -6,8 +6,19 @@ import Footer from "@comp/footer";
 import Desc from "@comp/descProd";
 import Btn from "@comp/btn";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import useColor from "../../../../Temas/Temas";
 
 export default function descricao(){
+
+    const color = useColor()
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            position: 'relative',
+            backgroundColor: color.bgPrimary
+          },
+        });
+
     return(
         <>
         <View style={styles.container}>
@@ -24,9 +35,3 @@ export default function descricao(){
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        position: 'relative',
-      },
-    });
