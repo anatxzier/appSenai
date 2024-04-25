@@ -6,10 +6,34 @@ import useColor from "../../Temas/Temas";
 
 export default function Recuperar(){
     const color = useColor()
+    const styles = StyleSheet.create({
+        container:{
+            alignItems: 'center',
+            height: '100%',
+            gap: 20,
+            backgroundColor: color.bgPrimary
+            
+        },
+    
+        texto:{
+    
+            marginBottom: 30,
+            marginTop: 50,
+            fontSize: 18,
+            fontWeight: '500',
+            maxWidth: 300,
+            textAlign: 'center',
+            color: color.textcolorPrimary,
+    
+    
+        },
+        
+    })
     return(
         <>
         <View>
-        <Header cor="#011E83" texto="Recuperação de Senha"/> 
+
+        <Header cor={color.nome === 'dark' ? color.bgPrimary : '"#011E83"'} texto="Recuperação de Senha"/> 
         </View>
 
         <View style={styles.container}>
@@ -24,22 +48,3 @@ export default function Recuperar(){
     )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        alignItems: 'center',
-        marginTop: 50,
-        gap: 20,
-        
-    },
-
-    texto:{
-
-        marginBottom: 30,
-        fontSize: 18,
-        fontWeight: '500',
-        maxWidth: 300,
-        textAlign: 'center',
-
-    },
-    
-})

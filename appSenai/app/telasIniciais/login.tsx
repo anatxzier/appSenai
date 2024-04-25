@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, TouchableOpacity, } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from "react-native";
 import Header from "@comp/header";
 import Input from "@comp/input";
 import { Link } from 'expo-router';
@@ -17,6 +17,7 @@ export default function Login() {
         },
         texto: {
             marginBottom: 30,
+            marginTop: 50,
             fontSize: 18,
             fontWeight: '500',
             color: color.textcolorPrimary,
@@ -28,6 +29,7 @@ export default function Login() {
         texto2: {
             color: color.nome === 'dark' ?  color.inputtextcolorPrimaryVariant : color.bgInfo,
             fontSize: 15,
+            marginTop: 50,
         }
     });
 
@@ -44,6 +46,7 @@ export default function Login() {
                 <LinkBtn nome="Login" href="TabNav" cor={color} />
 
                 <View style={styles.container2}>
+                    
                     <Link href="telasIniciais/cadastro" asChild>
                         <TouchableOpacity>
                             <Text style={styles.texto2}>Cadastre-se</Text>
