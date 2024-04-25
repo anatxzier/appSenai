@@ -21,6 +21,7 @@ export default function layout(){
                 tabBarStyle:{
                     backgroundColor: color.bgPrimary
                 },
+            
                 headerRight: ()=>(<FontAwesome6 style={{marginRight:10}} name="arrow-rotate-right" size={24} color='white'  />),
                  
             }}/>

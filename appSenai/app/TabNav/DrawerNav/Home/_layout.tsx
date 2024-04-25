@@ -16,10 +16,32 @@ export default function layout(){
                 headerSearchBarOptions: {
                     headerIconColor: color.inputtextcolorPrimaryVariant,
                     textColor: color.inputtextcolorPrimaryVariant, 
-                }
+                },
+                
                 
             }}/>
-            <Stack.Screen name="editar" />
+            <Stack.Screen name="additens" options={{
+                headerTintColor: color.inputtextcolorPrimaryVariant,
+                headerStyle: {
+                    backgroundColor: color.bgPrimary
+                }
+            }}/>
+
+                <Stack.Screen name="descricao" options={{
+                headerTintColor: color.inputtextcolorPrimaryVariant,
+                headerStyle: {
+                    backgroundColor: color.bgPrimary
+                }
+            }}/>
+
+                <Stack.Screen name="editar" options={{
+                headerTintColor: color.inputtextcolorPrimaryVariant,
+                headerStyle: {
+                    backgroundColor: color.bgPrimary
+                }
+            }}/>
+
         </Stack>
+
     )
 }
