@@ -18,6 +18,7 @@ function Loading() {
     },
     logo: {
       width: 200,
+      
       height: 51,
       marginBottom: 20,
     },
